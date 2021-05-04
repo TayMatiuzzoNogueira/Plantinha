@@ -1,28 +1,46 @@
-import React from "react"
-import styled from "styled-components/native"
-import { SafeAreaView, Text, Image, StyleSheet } from "react-native"
+import React, useState from "react"
+import { Container, Texto, SubTexto, Botao, Paragrafo } from "./style"
+import { SafeAreaView, Text, Image, StyleSheet, TouchableOpacity } from "react-native"
+import waterringImg from '../img/watering.png'
+// import {Button} from "../components/Button"
 
-import waterringImg from '../img/waterdrop.png'
+
 export function Welcome(){
+
+    const [visible, setVisible] = useState(false);
+    function handleVisibility(){
+        setVisible(true);
+    }
+
     return(
         <Container>
-            <Text>Gerencie suas plantas de forma fácil!</Text>
+            <Texto>Gerencie suas plantas de forma fácil!</Texto>
             <Image source= {waterringImg}/>
 
+            <SubTexto>Não esqueça mais de regar suas plantas. 
+                Nós cuidamos de lembrar você sempre que precisar
+            </SubTexto> 
+
+
+            <Botao activeOpacity={0.7} onpress={handleVisibility}>
+                <Paragrafo>
+                    Avançar 
+                </Paragrafo>
+            </Botao>
+
+            {/* <Button title="Mostrar" onpress={handleVisibility}/>                */}
+            {/* <Button title="Ocultar"/>                */}
         </Container>
     )
 }
 
 // const style = StyleSheet.create({
-//     container:{
+//     style:{
 //         flex:1,
-//         justifyContent:"center",
+//         justifyContent:"space-between",
 //         alignItems: "center",
+//         color: colors.red,
 //     }
 // })
 
-const Container = styled.SafeAreaView `
-    flex:1;
-    justify-content: center;
-    align-items: center;
-`
+
