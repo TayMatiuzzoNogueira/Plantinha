@@ -8,16 +8,23 @@ const image = { URL: "" };
 export function UserIdentification(){
 
     const [isFocused, setIsFocused] = useState(false);
+    const [isFilled, setIsFilled] = useState(false);
+    const [name, setName] = useState<string>();
+
 
     function handleInputBlur(){
         setIsFocused(false);
+        setIsFilled(!!name);
     }
 
     function handleInputFocus(){
         setIsFocused(true);
     }
    
-
+    function handleInputChange(value: string){
+        setIsFilled(!!value);
+        setName(value);
+    }
     
 
     return(
@@ -28,8 +35,8 @@ export function UserIdentification(){
                         <Formulario>
                             <Logo source={require('../../img/tulipas.png')}/>
                             <Texto>Como podemos {'\n'} chamar você?</Texto>
-                            <Input placeholder="Seu Nome" onBlur={handleInputBlur} onFocus={handleInputFocus}/>
-                            {/* isFocused && {borderColor: colors.green} */}
+                            <Input placeholder="Seu Nome" onchangeText={handleInputChange} onBlur={handleInputBlur} onFocus={handleInputFocus}/>
+                            {/* (isFocused || isFilled) && {borderColor: colors.green} */}
 
                             <Footer>
                                 <Button title="Avançar"></Button>
