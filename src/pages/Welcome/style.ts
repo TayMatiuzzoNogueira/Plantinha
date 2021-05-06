@@ -1,6 +1,6 @@
 import styled from "styled-components/native"
-import Color from "../../../styles/colors"
-import fonts from "../../../styles/fontes"
+import Color from "../../styles/colors"
+import fonts from "../../styles/fontes"
 import { Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 import { Entypo } from '@expo/vector-icons';

@@ -1,5 +1,6 @@
 import styled from "styled-components/native"
 import Color from "../../styles/colors"
+import Fonts from "../../styles/fontes"
 
 export const Botao = styled.TouchableOpacity`
     background-color: #66CDAA;

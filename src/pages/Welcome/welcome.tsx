@@ -1,7 +1,8 @@
 import React, {useState} from "react"
 import { Container, Texto, SubTexto, Icon, Wrapper, Imagem } from "./style"
-import waterringImg from '../img/watering.png'
-import {Button} from "../../components/Button"
+import {Button} from "../../components/Button/button"
+import { useNavigation } from "@react-navigation/core"
+import { NavigationContainer } from "@react-navigation/native"
 
 
 export function Welcome(){
@@ -10,6 +11,13 @@ export function Welcome(){
     // function handleVisibility(){
     //     setVisible(true);
     // }
+
+    const navigation = useNavigation();
+
+    function handleSelect(){
+        navigation.navigate('UserIdentification');
+    }
+
 
     return(
         <Container>
@@ -27,7 +35,7 @@ export function Welcome(){
                 </SubTexto> 
 
 
-                <Button title="">
+                <Button title="" onPress={handleSelect}>
                     <Icon name="chevron-right"/>
                 </Button>
                     

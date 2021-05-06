@@ -1,6 +1,6 @@
 import styled from "styled-components/native"
-import Color from "../../../styles/colors"
-import fonts from "../../../styles/fontes"
+import Color from "../../styles/colors"
+import fonts from "../../styles/fontes"
 
 export const Container = styled.SafeAreaView `
     flex:1;
@@ -15,22 +15,38 @@ export const Wrapper= styled.View`
     width: 100%;
 `
 
+export const Div = styled.View`
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+` 
+
 export const Background= styled.ImageBackground`
     flex: 1;
     width: 100%;
 `
 
-export const Logo= styled.ImageBackground`
-    height: 20%;
-    width: 52%;
+export const Logo= styled.Image.attrs({
+    resizeMode: 'cover',
+})`
+    height: 150px;
+    width: 150px;
     justify-content: center;
     align-items:center;
     
 `
 
-// export const KeyBoard = styled.KeyBoardAvoindingView`
-   
-// `
+export const Touch = styled.TouchableWithoutFeedback`
+
+
+`
+
+export const KeyBoard = styled.KeyboardAvoidingView`
+    flex:1;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+`
 
 export const Formulario= styled.View`
     flex: 1;
@@ -54,7 +70,7 @@ export const Texto= styled.Text`
 
 export const Input = styled.TextInput`
       border-bottom-width: 1;
-      border-color: ${Color.gray};
+      border-color: ${({focus}) => focus ? Color.green : Color.gray};
       color: ${Color.heading};
       width: 100%;
       font-size: 18px; 
