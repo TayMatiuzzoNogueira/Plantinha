@@ -8,7 +8,17 @@ export const Container = styled.View `
 `
 
 export const List = styled.FlatList`
+    height:60px;
+    padding-bottom: 5px;
+    margin:0 0 0 32px;
+    margin-top: 30px;
+`
 
+export const ListPlant = styled.FlatList`
+    height:60px;
+    padding-bottom: 5px;
+    margin:0 25px;
+    margin-top: 30px;
 `
 
 export const Wrapper= styled.View`
@@ -29,7 +39,7 @@ export const Title= styled.Text`
     color: ${Color.heading};
     font-family: ${fonts.heading};
     margin-top: 45px;
-    line-height: 26px
+    line-height: 26px;
 `
 
 export const Texto= styled.Text`
@@ -39,4 +49,9 @@ export const Texto= styled.Text`
     font-family: ${fonts.text};
     margin-top: 14px;
 `
+
+export const Plant = styled.View`
+    flex: 1;
+    justify-content: center;
+` 
 
