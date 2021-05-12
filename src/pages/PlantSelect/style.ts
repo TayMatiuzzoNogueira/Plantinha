@@ -1,6 +1,7 @@
 import styled from "styled-components/native"
 import Color from "../../styles/colors"
 import fonts from "../../styles/fontes"
+import { ActivityIndicator } from "react-native"
 
 export const Container = styled.View `
     flex:1;
@@ -55,3 +56,7 @@ export const Plant = styled.View`
     justify-content: center;
 ` 
 
+export const PageLoading = styled(ActivityIndicator)`
+    color: ${Color.green};
+
+`

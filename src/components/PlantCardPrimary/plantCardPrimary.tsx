@@ -1,7 +1,6 @@
 import React from "react"
-import { Container, Texto, Wrapper, Card } from "./style"
+import { Container, Texto, Wrapper, Card, PlantImg } from "./style"
 import { RectButton, RectButtonProps } from "react-native-gesture-handler"
-import { SvgFromUri } from 'react-native-svg';
 
 
 
@@ -15,7 +14,7 @@ interface PlantProps extends RectButtonProps{
 export const PlantCardPrimary = ({data, ...rest} : PlantProps) => {
     return(
         <Card {...rest}>
-            <SvgFromUri uri={data.photo} width={70} height={70}/>
+            <PlantImg uri={data.photo} width={70} height={70}/>
             <Texto> { data.name } </Texto>
         </Card>
     )

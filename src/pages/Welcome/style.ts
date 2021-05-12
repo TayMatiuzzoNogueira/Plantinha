@@ -4,14 +4,14 @@ import fonts from "../../styles/fontes"
 import { Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 import { Entypo } from '@expo/vector-icons';
-
+import LottieView from "lottie-react-native";
 
 
 export const Container = styled.SafeAreaView `
     flex:1;
     justify-content: space-around;
     align-items: center;
-    /* background-color: #feffeb; */
+    background-color: #feffeb;
 `
 export const Wrapper= styled.View`
     flex: 1;
@@ -45,8 +45,10 @@ export const SubTexto = styled.Text`
     
 // `
 
-export const Imagem = styled.Image` 
-    height: ${width*0.7};
+export const Imagem = styled(LottieView)` 
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
 `
 export const Icon = styled(Entypo)`
     font-size: 34px;

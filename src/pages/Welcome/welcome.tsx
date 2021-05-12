@@ -4,6 +4,8 @@ import {Button} from "../../components/Button/button"
 import { useNavigation } from "@react-navigation/core"
 import { NavigationContainer } from "@react-navigation/native"
 
+import loadAnimation from "../../img/girl-with-flowers.json";
+
 
 export function Welcome(){
 
@@ -23,7 +25,9 @@ export function Welcome(){
         <Container>
             <Wrapper>
                 <Texto>Gerencie {'\n'} suas plantas de {'\n'} forma fácil!</Texto>
-                <Imagem source={require('../../img/waterPlant.png')} resizeMode="contain"/>
+                <Imagem source={loadAnimation}
+                    autoPlay
+                    loop/>
                 
                 {/* {
                     visible &&

@@ -1,7 +1,7 @@
 import styled from "styled-components/native"
 import Color from "../../styles/colors"
 import fonts from "../../styles/fontes"
-import { getStatusBarHeight } from 'react-native-iphone-x-helper'
+import { SvgFromUri } from "react-native-svg"
 import { RectButton, RectButtonProps } from "react-native-gesture-handler"
 
 
@@ -32,4 +32,8 @@ export const Wrapper= styled.View`
 export const Plant = styled.View`
     
 ` 
+export const PlantImg = styled(SvgFromUri)`
+  margin-top: 30px;
+
+`
 
